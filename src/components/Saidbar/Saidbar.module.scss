@@ -1,0 +1,117 @@
+.saidbar_shadow{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    
+  }
+
+.saidbar_visible{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+
+    .saidbar{
+      transform: translateX(0%);
+    }
+ }
+
+ .saidbar{
+  
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  width: 385px;
+  height: 100%;
+  right: 0;
+  top: 0px;
+
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+
+  transition: transform 0.3s ease-out;
+  transform: translateX(100%);
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart{
+    width: 325px;
+    margin: 30px auto 0;
+    flex: 1;
+  
+    &__item{
+      border: 1px solid #f3f3f3;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      overflow: hidden;
+  
+      &>img{
+        margin-right: 21px;
+      }
+  
+  
+      button{
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+  
+        &:hover{
+          opacity: 1;
+        }
+      }
+  
+    }
+  
+    &__dict{
+      max-width: 150px;
+      p{
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+
+  .paymant{
+    ul{
+      li{
+        display: flex;
+        justify-content: space-between;
+        .dashed{
+          width: 167px;
+          border-bottom: 1px dashed #DFDFDF;
+        }
+      }
+    }
+    button{
+      margin-top: 24px;
+    }
+
+  }
+  
+  &__content{
+    flex: 1;
+    display: flex;
+  }
+  &__block{
+    display: flex;
+    flex-direction: column;
+  }
+}
